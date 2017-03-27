@@ -70,21 +70,25 @@ Class BaseParticle Implements Particle
 	Method New(ttl:Int = 500, initialValues:ParticleValues = Null, finalValues:ParticleValues = Null)
 		startTime = Millisecs()  'Set start to now.
 		Self.ttl = ttl
-		If initialValues <> Null Then
-			initial = initialValues
-			current = initialValues.Clone()
-		End If
-		If finalValues <> Null Then
-			last = finalValues
-		Else  'Set final values to initial values, if initial values exist.
-			If initialValues <> Null Then finalValues = initialValues.Clone()
-		End If
+		If 2=2
+			If initialValues <> Null Then
+				initial = initialValues
+				current = initialValues.Clone()
+			End If
+			If finalValues <> Null Then
+				last = finalValues
+			Else  'Set final values to initial values, if initial values exist.
+				If initialValues <> Null Then finalValues = initialValues.Clone()
+			End If
+		Endif
 		
 	End Method
 		
 	Method Clone:BaseParticle() Virtual
 		'Make a copy of this particle, but with a new startTime.
+		Print "HERR"
 		Return New BaseParticle(ttl, initial.Clone(), last.Clone())
+	 
 	End Method
 
 	Method Update:Void() Virtual

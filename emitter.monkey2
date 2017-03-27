@@ -33,7 +33,9 @@ Class ParticleEmitter Extends BaseParticle
 	Method Clone:ParticleEmitter() Override
 		'Make a copy of this particle, but with a new startTime.
 		Local p:= New ParticleEmitter(f, emitInterval, ttl, LockToEmitter)
-		p.initial = initial.Clone(); p.current = initial.Clone(); p.last = last.Clone()
+		p.initial = initial.Clone()
+		p.current = initial.Clone()
+		p.last = last.Clone()
 		p.SetEmissions(emitInterval, minBurst_i, maxBurst_i, minBurst_l, maxBurst_l)
 		Return p
 	End Method

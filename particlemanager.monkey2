@@ -23,7 +23,7 @@ Class ParticleManager
 
 			'Kill emitters that are dead.
  
-				If o.isDead Then deademitters.Add(o)
+			If o.isDead Then deademitters.Add(o)
 		Next
  
 		
