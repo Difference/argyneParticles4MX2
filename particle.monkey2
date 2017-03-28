@@ -70,7 +70,7 @@ Class BaseParticle Implements Particle
 	Method New(ttl:Int = 500, initialValues:ParticleValues = Null, finalValues:ParticleValues = Null)
 		startTime = Millisecs()  'Set start to now.
 		Self.ttl = ttl
-		If 2=2
+
 			If initialValues <> Null Then
 				initial = initialValues
 				current = initialValues.Clone()
@@ -80,7 +80,7 @@ Class BaseParticle Implements Particle
 			Else  'Set final values to initial values, if initial values exist.
 				If initialValues <> Null Then finalValues = initialValues.Clone()
 			End If
-		Endif
+ 
 		
 	End Method
 		

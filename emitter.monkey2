@@ -23,7 +23,8 @@ Class ParticleEmitter Extends BaseParticle
 		
 	'Summary: Creates an emitter which emits the prototype's particles.
 	Method New(factory:ParticleFactory, interval:Int, ttl:Int = 500, LockParticlesToEmitter:Bool = False)
-		Super.New(ttl, Self.initial, Self.last)
+		Super.New(ttl, null, null)
+		' MX2 ctor changed according to http://monkey2.monkey-x.com/forums/topic/ported-particle-system-memory-access-violation/
 		f = factory
 		SetEmissions(interval, 1, 1, 1, 1)
 		LockToEmitter = LockParticlesToEmitter
